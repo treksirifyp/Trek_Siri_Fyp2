@@ -1,0 +1,66 @@
+actions:
+- action_address
+- action_best_hotels
+- action_cheap_hotels
+- action_fallback
+- action_hotels_price
+- action_hotels_rating
+- action_picture
+- action_price
+- action_tourist_spots
+- action_weather
+- utter_ask_city
+- utter_fallback
+- utter_goodbye
+- utter_greet
+- utter_picture
+entities:
+- city
+- condition
+- position
+- price
+- query
+- rating
+intents:
+- inform_tourist_spots
+- inform_hotels_rating
+- inform_weather
+- inform_hotels_price
+- inform_best_hotels
+- inform_fallback
+- inform_picture
+- inform_address
+- inform_price
+- inform_cheap_hotels
+- greet
+- goodbye
+- utter_fallback
+responses:
+  utter_ask_city:
+  - text: In which city?
+  utter_fallback:
+  - text: I am sorry. I can't understand you.
+  utter_goodbye:
+  - text: Talk to you later.
+  - text: Bye bye.
+  utter_greet:
+  - text: Hello! How can I help you?
+  utter_picture:
+  - image: '{image_path}'
+    text: Here is a picture you wanted
+session_config:
+  carry_over_slots_to_new_session: false
+  session_expiration_time: 0
+slots:
+  city:
+    type: text
+  condition:
+    type: text
+  position:
+    type: text
+  price:
+    type: text
+  query:
+    type: text
+  rating:
+    type: text
